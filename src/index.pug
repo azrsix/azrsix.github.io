@@ -1,0 +1,65 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title AZRSIX Lab
+    link(rel="icon" href="favicon/favicon.ico")
+    link(rel="icon" href="favicon/favicon-192x192.png" sizes="192x192" type="image/png")
+    link(rel="apple-touch-icon" href="favicon/apple-touch-icon-152x152.png" sizes="152x152")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Cute+Font")
+    link(rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+    link(rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nicomoji.css")
+    link(rel="stylesheet" href="//use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+    link(rel="stylesheet" href="css/style.min.css")
+  body.eyecatch
+    header.top
+      .page.half
+        .in.flex.column.center
+          h1.title AZRSIX Lab
+          h2.sub-title アザラボ
+          .menu.flex.row.between
+            span.btn.flex.center
+              i.fas.fa-keyboard
+            span.btn.flex.center
+              i.fas.fa-pen
+            span.btn.tori.flex.center
+            a.btn.flex.center(href="https://twitter.com/azrsix" target="_blank" title="Twitter")
+              i.fab.fa-twitter
+            a.btn.flex.center(href="https://github.com/azrsix" target="_blank" title="GitHub")
+              i.fab.fa-github
+    main.loaded
+      .page.half.align-top
+        .flex.responsive.full
+          .box.grid-33
+          .box.grid-33
+            .flex.row.between
+              h3 About me
+              .sns
+                a(href="https://twitter.com/azrsix" target="_blank" title="Twitter")
+                  i.fab.fa-twitter
+                a(href="https://github.com/azrsix" target="_blank" title="GitHub")
+                  i.fab.fa-github
+            h4 @azrsix
+            p 永遠の勉強中。
+              br
+              | 読み方はあざらしっくすでもあざろくでも。
+            ul.tags
+              li Web
+              li JavaScript
+              li CSS
+              li Sass
+              li PostCSS
+              li PHP
+              li Perl
+              li Yokohama
+              li Oniku
+            p
+              small なにか増えたら貼っていく
+          .box.grid-33
+      .page.half.align-top
+    footer.footer.flex.responsive.center
+      .copyright Copyright &copy; 2018 azrsix
+    #ue-scroll.ue-scroll.btn-white.arrow-black.circle.shadow
+    script(src="js/app.min.js")
