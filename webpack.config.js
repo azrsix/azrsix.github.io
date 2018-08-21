@@ -1,18 +1,15 @@
 const path = require('path');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const contents = ['index'];
 
 const config = {
   mode: 'production',
-  entry: {
-    'js/app.min.js': './src/js/app.js',
-    'css/style.min.css': './src/css/style.css'
-  },
+  entry: ['./src/js/app.js', './src/css/style.css'],
   output: {
     path: path.resolve(__dirname),
-    filename: '[name]'
+    filename: 'js/app.min.js'
   },
   module: {
     rules: [{
@@ -26,17 +23,16 @@ const config = {
       }]
     }, {
       test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1
-          }
-        }, {
-          loader: 'postcss-loader'
-        }]
-      })
+      use: [{
+        loader: MiniCssExtractPlugin.loader
+      }, {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1
+        }
+      }, {
+        loader: 'postcss-loader'
+      }],
     }, {
       test: /\.pug$/,
       loader: 'pug-loader'
@@ -53,7 +49,9 @@ const config = {
   },
   plugins: [
     new MinifyPlugin(),
-    new ExtractTextPlugin('[name]'),
+    new MiniCssExtractPlugin({
+      filename: 'css/style.min.css'
+    })
   ].concat(contents.map((name) => {
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
