@@ -42,7 +42,7 @@ const config = {
         loader: 'url-loader',
         options: {
           limit: 8192,
-          name: '../img/[name].[ext]'
+          name: './img/[name].[ext]'
         }
       }]
     }]
