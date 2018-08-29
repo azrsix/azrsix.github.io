@@ -20,11 +20,10 @@ html {
 body {
   position: relative;
   font-size: 2rem;
-  font-family: sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #000;
-  font-family: "Noto Sans Japanese";
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 main {
