@@ -32,7 +32,7 @@ const config = {
         }
       }, {
         loader: 'postcss-loader'
-      }],
+      }]
     }, {
       test: /\.pug$/,
       loader: 'pug-loader'
