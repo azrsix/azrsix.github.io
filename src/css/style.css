@@ -190,11 +190,15 @@ small {
   text-align: left;
   font-size: 1.4rem;
   & h3 {
+    margin-top: 1rem;
     font-size: 2.4rem;
     font-weight: 700;
+    &:first-child {
+      margin-top: 0;
+    }
   }
   & h4 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 700;
   }
 }
@@ -222,6 +226,38 @@ small {
     border-radius: 4px;
     font-size: 1.3rem;
     cursor: default;
+  }
+}
+
+.works {
+  align-items: baseline;
+  & > h4 {
+    margin-right: 10px;
+    & > a {
+      color: #000;
+      &:hover,
+      &:active,
+      &:focus {
+        color: #b8d200;
+      }
+    }
+  }
+  & > .works-icon {
+    margin-right: 5px;
+    & > [class*="fa-"] {
+      font-size: 1.8rem;
+    }
+  }
+  & > .spacer {
+    width: 0;
+  }
+  & > p {
+    margin-left: 5px;
+    align-self: center;
+    &:before {
+      content: "...";
+      margin-right: 10px;
+    }
   }
 }
 
@@ -292,6 +328,12 @@ small {
   .box {
     &.desktop-only {
       display: none;
+    }
+  }
+  .works {
+    flex-wrap: wrap;
+    & > .spacer {
+      width: 100%;
     }
   }
   .footer {

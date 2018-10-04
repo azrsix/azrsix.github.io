@@ -2,7 +2,7 @@
   "name": "azrsix.github.io",
   "license": "UNLICENSED",
   "dependencies": {
-    "ue-scroll-js": "^1.0.1"
+    "ue-scroll-js": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
