@@ -230,6 +230,7 @@ small {
 }
 
 .works {
+  flex-wrap: wrap;
   align-items: baseline;
   & > h4 {
     margin-right: 10px;
@@ -249,7 +250,7 @@ small {
     }
   }
   & > .spacer {
-    width: 0;
+    width: 100%;
   }
   & > p {
     margin-left: 5px;
@@ -328,12 +329,6 @@ small {
   .box {
     &.desktop-only {
       display: none;
-    }
-  }
-  .works {
-    flex-wrap: wrap;
-    & > .spacer {
-      width: 100%;
     }
   }
   .footer {
