@@ -2,6 +2,7 @@ const path = require('path');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const contents = ['index'];
 
 const config = {
@@ -51,6 +52,9 @@ const config = {
     new MinifyPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/style.min.css'
+    }),
+    new PurgecssPlugin({
+      paths: 'src/index.pug'
     })
   ].concat(contents.map((name) => {
     return new HtmlWebpackPlugin({

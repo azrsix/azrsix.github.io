@@ -6,6 +6,7 @@ module.exports = ({ file, options, env }) => ({
         'nesting-rules': true
       }
     },
+    'tailwindcss': {},
     'cssnano': {}
   }
 });
