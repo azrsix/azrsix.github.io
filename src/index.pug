@@ -29,71 +29,68 @@ html(lang="ja")
     script(defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
       integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
       crossorigin="anonymous")
-  body.eyecatch
+  body
     noscript
       iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-TDXC5SK" height="0" width="0" style="display:none;visibility:hidden")
-    header.top
-      .page.half
-        .in.flex.column.center
-          h1.title AZRSIX Lab
-          h2.sub-title アザラボ
-          .menu.flex.row.between
-            a.btn.flex.center(href="https://azrsix.hateblo.jp/" target="_blank" rel="noopener" title="Blog")
+    header.portrait_justify-center.bg-white.leading-snug
+      .flex.flex-col.flex-center.min-w-full.min-h-half-screen
+        .flex.flex-col.flex-center.anim-1
+          h1 AZRSIX Lab
+          h2.anim-3 アザラボ
+          .flex.justify-between.w-full.mt-3.opacity-0.anim-2
+            a.btn(href="https://azrsix.hateblo.jp/" target="_blank" rel="noopener" title="Blog")
               i.fas.fa-keyboard
-            span.btn.flex.center
+            span.btn
               i.fas.fa-pen
-            span.btn.tori.flex.center
-            a.btn.flex.center(href="https://twitter.com/azrsix" target="_blank" rel="noopener" title="Twitter")
+            span.btn.tori
+            a.btn(href="https://twitter.com/azrsix" target="_blank" rel="noopener" title="Twitter")
               i.fab.fa-twitter
-            a.btn.flex.center(href="https://github.com/azrsix" target="_blank" rel="noopener" title="GitHub")
+            a.btn(href="https://github.com/azrsix" target="_blank" rel="noopener" title="GitHub")
               i.fab.fa-github
-    main.loaded
-      .page.half.align-top
-        .flex.responsive.full
-          .box.grid-33
-          .box.grid-33
-            .flex.row.between
-              h3 About me
-              .sns
-                a(href="https://azrsix.hateblo.jp/" target="_blank" rel="noopener" title="Blog")
+    main.block.opacity-0.anim-4
+      .flex.flex-col.items-center.justify-start.min-w-full.min-h-half-screen
+        .flex.flex-responsive.w-full
+          .box.portrait_w-full.last_mr-0
+          .box.portrait_w-full.last_mr-0
+            .flex.justify-between
+              h3.first_mt-0 About me
+              .flex
+                a.ml-2.text-2xl(href="https://azrsix.hateblo.jp/" target="_blank" rel="noopener" title="Blog")
                   i.fas.fa-keyboard
-                a(href="https://twitter.com/azrsix" target="_blank" rel="noopener" title="Twitter")
+                a.ml-2.text-2xl(href="https://twitter.com/azrsix" target="_blank" rel="noopener" title="Twitter")
                   i.fab.fa-twitter
-                a(href="https://github.com/azrsix" target="_blank" rel="noopener" title="GitHub")
+                a.ml-2.text-2xl(href="https://github.com/azrsix" target="_blank" rel="noopener" title="GitHub")
                   i.fab.fa-github
             h4 @azrsix
-            p 永遠の勉強中。
-              br
-              | 読み方はあざらしっくすでもあざろくでも。
-            ul.tags
-              li Web
-              li JavaScript
-              li TypeScript
-              li Vue.js
-              li Nuxt.js
-              li Node.js
-              li CSS
-              li Sass
-              li PostCSS
-              li PHP
-              li Perl
-              li Yokohama
-              li Oniku
-            p
-              small なにか増えたら貼っていく
-            h3 My works
-            .flex.row.works
+            p.my-1 常になにかと戦っている気がする鳥類
+            ul.flex.flex-wrap.justify-start.mt-2
+              li.tag Web
+              li.tag JavaScript
+              li.tag TypeScript
+              li.tag Vue.js
+              li.tag Nuxt.js
+              li.tag Node.js
+              li.tag CSS
+              li.tag Sass
+              li.tag PostCSS
+              li.tag Perl
+              li.tag PHP
+              li.tag Yokohama
+              li.tag Oniku
+            p.mt-1.text-xs （たまに増えたり減ったりします）
+            h3.first_mt-0 My works
+            .flex.flex-wrap.items-baseline
               h4
-                a(href="https://azrsix.github.io/ue-scroll-js/ja/" target="_blank" rel="noopener") ue-scroll.js
-              a.works-icon(href="https://azrsix.github.io/ue-scroll-js/ja/" target="_blank" rel="noopener" title="説明書")
-                i.fas.fa-home
-              a.works-icon(href="https://github.com/azrsix/ue-scroll-js" target="_blank" rel="noopener" title="GitHub Repository")
-                i.fab.fa-github
-              span.spacer
-              p jQueryを使わないタイプの上に戻るボタン
-          .box.grid-33
-      .page.half.align-top
-    footer.footer.flex.center
-      .copyright &copy;&nbsp;#[span.year 2018]&nbsp;azrsix
+                a.text-black(href="https://azrsix.github.io/ue-scroll-js/ja/" target="_blank" rel="noopener") ue-scroll.js
+              a.mr-1(href="https://azrsix.github.io/ue-scroll-js/ja/" target="_blank" rel="noopener" title="説明書")
+                i.fas.fa-home.text-lg
+              a.mr-1(href="https://github.com/azrsix/ue-scroll-js" target="_blank" rel="noopener" title="GitHub Repository")
+                i.fab.fa-github.text-lg
+              span.w-full
+              p.works jQueryを使わないタイプの上に戻るボタン
+          .box.portrait_w-full.last_mr-0
+      .flex.flex-col.items-center.justify-start.min-w-full.min-h-half-screen
+    footer.flex.flex-center.absolute.inset-x-0.bottom-0.w-full.text-base.portrait_text-sm.font-bold.text-center.text-f69
+      .js-copyright.mb-8 &copy;&nbsp;#[span.js-year 2018]&nbsp;azrsix
     #ue-scroll.ue-scroll.btn-white.arrow-black.circle.shadow
     script(src="js/app.min.js")

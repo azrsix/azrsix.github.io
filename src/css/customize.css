@@ -1,0 +1,124 @@
+/* customize.css */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply relative font-body;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 102, 153, 0.5),
+    rgba(184, 210, 0, 0.5)
+  );
+}
+
+a {
+  @apply text-f69 no-underline;
+  &:hover,
+  &:focus {
+    @apply text-hover;
+  }
+}
+
+h1 {
+  @apply m-0 font-normal font-cute text-f69 leading-3-quarters;
+  font-size: 8vw;
+}
+
+h2 {
+  @apply mt-1 font-normal font-nicomoji text-333 opacity-0;
+  font-size: 2.4vw;
+  &:before {
+    margin-right: 1.3vw;
+    content: "======";
+  }
+  &:after {
+    margin-left: 1.3vw;
+    content: "======";
+  }
+}
+
+h3 {
+  @apply mt-2 text-2xl font-bold;
+}
+
+h4 {
+  @apply mr-2 text-xl font-bold;
+}
+
+.flex-responsive {
+  @apply flex-row;
+}
+
+.flex-center {
+  @apply justify-center items-center;
+}
+
+.btn {
+  @apply flex flex-center rounded-full bg-f69 text-white;
+  width: 5vw;
+  height: 5vw;
+  font-size: 2.2vw;
+  &.tori {
+    @apply bg-tori bg-no-repeat bg-cover;
+    background-image: url("/img/tori.png");
+  }
+  &:hover,
+  &:focus {
+    @apply bg-hover text-white;
+  }
+}
+
+.box {
+  @apply w-1-3rd mt-2 mr-2 p-5 bg-white text-sm;
+}
+
+.tag {
+  @apply mr-1 mb-1 py-1 px-2 rounded bg-f69 text-white text-xs cursor-default;
+}
+
+.works {
+  @apply self-center ml-1;
+  &:before {
+    @apply mr-2;
+    content: "...";
+  }
+}
+
+@media (orientation: portrait) {
+  h1 {
+    font-size: 24vw;
+  }
+  h2 {
+    font-size: 7.5vw;
+    &:before {
+      margin-right: 3vw;
+    }
+    &:after {
+      margin-left: 3vw;
+    }
+  }
+  .flex-responsive {
+    @apply flex-col;
+  }
+  .btn {
+    width: 15vw;
+    height: 15vw;
+    font-size: 6vw;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 6vw;
+  }
+  h2 {
+    font-size: 1.8vw;
+  }
+  .btn {
+    width: 3.75vw;
+    height: 3.75vw;
+    font-size: 1.65vw;
+  }
+}
