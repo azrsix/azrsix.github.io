@@ -47,14 +47,6 @@ h4 {
   @apply mr-2 text-xl font-bold;
 }
 
-.flex-responsive {
-  @apply flex-row;
-}
-
-.flex-center {
-  @apply justify-center items-center;
-}
-
 .btn {
   @apply flex flex-center rounded-full bg-f69 text-white;
   width: 5vw;
@@ -98,9 +90,6 @@ h4 {
     &:after {
       margin-left: 3vw;
     }
-  }
-  .flex-responsive {
-    @apply flex-col;
   }
   .btn {
     width: 15vw;

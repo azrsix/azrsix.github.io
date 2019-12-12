@@ -30,5 +30,14 @@ module.exports = {
   variants: {
     margin: ['responsive', 'first', 'last']
   },
-  plugins: []
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.flex-center': {
+          'justify-content': 'center',
+          'align-items': 'center'
+        }
+      })
+    }
+  ]
 }
