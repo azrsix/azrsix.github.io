@@ -2,6 +2,9 @@
   "name": "azrsix.github.io",
   "license": "UNLICENSED",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "tailwindcss": "^1.1.4",
     "ue-scroll-js": "^2.0.1"
   },
