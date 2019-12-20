@@ -1,12 +1,19 @@
+const colors = {
+  'french-pink': '#f69',
+  'jet': '#333',
+  'pale-goldenrod': '#e0ebaf',
+  'vivid-lime-green': '#b8d200'
+}
+
 module.exports = {
   separator: '_',
   theme: {
     extend: {
       colors: {
-        '333': '#333',
-        'f69': '#f69',
-        'tori': '#e0ebaf',
-        'hover': '#b8d200'
+        ...colors,
+        'accent': colors['french-pink'],
+        'tori': colors['pale-goldenrod'],
+        'hover': colors['vivid-lime-green']
       },
       screens: {
         'portrait': {'raw': '(orientation: portrait)'}

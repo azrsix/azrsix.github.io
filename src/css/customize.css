@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  @apply text-f69 no-underline;
+  @apply text-accent no-underline;
   &:hover,
   &:focus {
     @apply text-hover;
@@ -22,12 +22,12 @@ a {
 }
 
 h1 {
-  @apply m-0 font-normal font-cute text-f69 leading-3-quarters;
+  @apply m-0 font-normal font-cute text-accent leading-3-quarters;
   font-size: 8vw;
 }
 
 h2 {
-  @apply mt-1 font-normal font-nicomoji text-333 opacity-0;
+  @apply mt-1 font-normal font-nicomoji text-jet opacity-0;
   font-size: 2.4vw;
   &:before {
     margin-right: 1.3vw;
@@ -48,7 +48,7 @@ h4 {
 }
 
 .btn {
-  @apply flex flex-center rounded-full bg-f69 text-white;
+  @apply flex flex-center rounded-full bg-accent text-white;
   width: 5vw;
   height: 5vw;
   font-size: 2.2vw;
@@ -67,7 +67,7 @@ h4 {
 }
 
 .tag {
-  @apply mr-1 mb-1 py-1 px-2 rounded bg-f69 text-white text-xs cursor-default;
+  @apply mr-1 mb-1 py-1 px-2 rounded bg-accent text-white text-xs cursor-default;
 }
 
 .works {
