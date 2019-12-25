@@ -12,6 +12,6 @@ dom.i2svg();
 ue.init()
 
 const yearBox = document.querySelector('.js-copyright > .js-year')
-const sinceYear = Number(yearBox.innerHTML)
+const sinceYear = Number(yearBox!.innerHTML)
 const thisYear  = new Date().getFullYear()
-if (sinceYear < thisYear) yearBox.insertAdjacentHTML('beforeend', `-${thisYear}`)
+if (sinceYear < thisYear) yearBox!.insertAdjacentHTML('beforeend', `-${thisYear}`)

@@ -1,5 +1,4 @@
 const path = require('path');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
@@ -7,20 +6,20 @@ const contents = ['index'];
 
 const config = {
   mode: 'production',
-  entry: ['./src/js/app.js', './src/css/style.css'],
+  entry: ['./src/ts/app.ts', './src/css/style.css'],
   output: {
     path: path.resolve(__dirname),
     filename: 'js/app.min.js'
   },
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.ts$/,
       exclude: /node_modules/,
       use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
-        }
+        loader: 'ts-loader'
       }]
     }, {
       test: /\.css$/,
@@ -49,7 +48,6 @@ const config = {
     }]
   },
   plugins: [
-    new MinifyPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/style.min.css'
     }),
