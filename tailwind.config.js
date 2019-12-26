@@ -11,12 +11,12 @@ module.exports = {
     extend: {
       colors: {
         ...colors,
-        'accent': colors['french-pink'],
-        'tori': colors['pale-goldenrod'],
-        'hover': colors['vivid-lime-green']
+        accent: colors['french-pink'],
+        tori: colors['pale-goldenrod'],
+        hover: colors['vivid-lime-green']
       },
       screens: {
-        'portrait': {'raw': '(orientation: portrait)'}
+        portrait: { raw: '(orientation: portrait)' }
       },
       width: {
         '1-3rd': 'calc(100% / 3)'
@@ -25,9 +25,9 @@ module.exports = {
         'half-screen': '50vh'
       },
       fontFamily: {
-        'body': ['Noto Sans JP', 'sans-serif'],
-        'cute': ['Cute Font', 'cursive'],
-        'nicomoji': ['Nico Moji']
+        body: ['Noto Sans JP', 'sans-serif'],
+        cute: ['Cute Font', 'cursive'],
+        nicomoji: ['Nico Moji']
       },
       lineHeight: {
         '3-quarters': '.75'

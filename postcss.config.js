@@ -1,4 +1,4 @@
-module.exports = ({ file, options, env }) => ({
+module.exports = () => ({
   plugins: {
     'postcss-import': {},
     'postcss-preset-env': {
@@ -9,4 +9,4 @@ module.exports = ({ file, options, env }) => ({
     'tailwindcss': {},
     'cssnano': {}
   }
-});
+})
