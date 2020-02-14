@@ -1,8 +1,13 @@
 const path = require('path')
+const glob = require('glob')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const contents = ['index']
+
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
 
 const config = {
   mode: 'production',
@@ -65,7 +70,7 @@ const config = {
       filename: 'css/style.min.css'
     }),
     new PurgecssPlugin({
-      paths: 'src/index.pug'
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
     })
   ].concat(
     contents.map((name) => {
